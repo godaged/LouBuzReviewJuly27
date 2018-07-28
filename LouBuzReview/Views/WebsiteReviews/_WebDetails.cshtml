@@ -1,0 +1,99 @@
+﻿@model LouBuzReview.Models.WebsiteReview
+
+@*
+    This partial view is for Delete and Details View.
+*@
+@*<table>
+    <tr>
+        <td style="display:none">@Html.HiddenFor(model => model.WebUser.UserID)</td>
+        <td style="display:none">@Html.HiddenFor(model => model.Website.WebsiteID)</td>
+        <td style="display:none">@Html.HiddenFor(model => model.WebsiteID)</td>
+        <td style="display:none">@Html.HiddenFor(model => model.UserID)</td>
+    </tr>
+</table>*@
+
+
+<dl class="dl-horizontal">
+    <dt style="text-align:left; text-decoration: underline; font-size:large; padding-top: 10px;"><strong>User Info</strong></dt>
+    <dd></dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.WebUser.FirstName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.WebUser.FirstName)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.WebUser.LastName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.WebUser.LastName)
+    </dd>
+
+
+    <dt>
+        @Html.DisplayNameFor(model => model.WebUser.City)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.WebUser.City)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.WebUser.State)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.WebUser.State)
+    </dd>
+    <dt style="text-align:left; text-decoration: underline; font-size:large; padding-top: 10px;"><strong>Business Info</strong></dt>
+    <dd></dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Website.Category)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Website.Category)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Website.WebsiteName)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Website.WebsiteName)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Website.WebsiteUrl)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Website.WebsiteUrl)
+    </dd>
+    <dt style="text-align:left; text-decoration: underline; font-size:large; padding-top: 10px;"><strong>Review Info</strong></dt>
+    <dd></dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Ratings)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Ratings)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.UserReview)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.UserReview)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.CreatedDate)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.CreatedDate)
+    </dd>
+</dl>
