@@ -161,6 +161,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807280310187_initial.cs" />
+    <Compile Include="Migrations\201807280310187_initial.Designer.cs">
+      <DependentUpon>201807280310187_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Website.cs" />
     <Compile Include="Models\WebsiteReview.cs" />
     <Compile Include="Models\WebUser.cs" />
@@ -168,6 +173,10 @@
     <Compile Include="ViewModels\AddAWebsiteReview.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\LouBuzReview.mdf" />
+    <Content Include="App_Data\LouBuzReview_log.ldf">
+      <DependentUpon>LouBuzReview.mdf</DependentUpon>
+    </Content>
     <Content Include="CSS\bootstrap-datepicker3.min.css" />
     <Content Include="CSS\bootstrap.css" />
     <Content Include="CSS\bootstrap.min.css" />
@@ -231,8 +240,11 @@
     <Content Include="Views\WebsiteReviews\_WebDetails.cshtml" />
     <Content Include="Views\Home\AddAReview.cshtml" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <EmbeddedResource Include="Migrations\201807280310187_initial.resx">
+      <DependentUpon>201807280310187_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

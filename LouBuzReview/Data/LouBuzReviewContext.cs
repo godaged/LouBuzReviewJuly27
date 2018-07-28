@@ -17,12 +17,9 @@ namespace LouBuzReview.Data
         public DbSet<WebsiteReview> WebsiteReviews { get; set; }
 
         //public System.Data.Entity.DbSet<LouBuzReview.ViewModels.AddAWebsiteReview> AddAWebsiteReviews { get; set; }
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<WebsiteReview>()
-        //        .HasOptional<WebUser>(w => w.WebUser)
-        //        .WithMany()
-        //        .WillCascadeOnDelete(true);
-        //}
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer(new LouBuzReviewInitializer());
+        }
     }
 }
